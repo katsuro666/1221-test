@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='layout__wrapper'>
     <BreadcrumbBar />
     <router-view />
   </div>
@@ -9,4 +9,4 @@
 import BreadcrumbBar from '../components/BreadcrumbBar/BreadcrumbBar.vue';
 </script>
 
-<style scoped></style>
+<style scoped lang="scss" src="./layouts.styles.scss"></style>

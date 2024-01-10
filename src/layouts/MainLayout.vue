@@ -1,7 +1,9 @@
 <template>
-  <router-view />
+  <div class="layout__wrapper">
+    <router-view />
+  </div>
 </template>
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style scoped lang="scss" src="./layouts.styles.scss"></style>

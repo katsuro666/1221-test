@@ -1,16 +1,7 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-  transition: background 0.2s;
-}
-
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: #FFFFFF;
+  background: #313131;
 
   line-height: 1.6;
   font-family:
