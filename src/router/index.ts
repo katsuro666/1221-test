@@ -16,7 +16,12 @@ const router = createRouter({
       component: MainPage,
       meta: {
         layout: MainLayout,
-        title: 'Home',
+        title: 'Главная',
+        breadcrumb: () => [
+          {
+            title: 'Главная',
+          },
+        ],
       },
     },
 
@@ -29,11 +34,11 @@ const router = createRouter({
         title: 'Posts',
         breadcrumb: () => [
           {
-            title: 'Home',
+            title: 'Главная',
             link: RoutePaths.HOME,
           },
           {
-            title: 'Posts',
+            title: 'Список постов',
           },
         ],
       },
@@ -48,15 +53,15 @@ const router = createRouter({
         title: 'Post',
         breadcrumb: (route: RouteLocationNormalizedLoaded) => [
           {
-            title: 'Home',
+            title: 'Главная',
             link: RoutePaths.HOME,
           },
           {
-            title: 'Posts',
+            title: 'Список постов',
             link: RoutePaths.POSTS,
           },
           {
-            title: route.params.postId,
+            title: `Пост №${route.params.postId}`,
           },
         ],
       },
