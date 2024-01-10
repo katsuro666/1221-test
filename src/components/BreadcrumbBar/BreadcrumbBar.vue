@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { IBreadcrumb } from '@/../../router';
 
@@ -23,6 +23,12 @@ const breadcrumbs = ref<IBreadcrumb[]>([]);
 if (typeof route.meta.breadcrumb === 'function') {
   breadcrumbs.value = route.meta.breadcrumb(route);
 }
+
+watch(route, (newRoute) => {
+  if (typeof newRoute.meta.breadcrumb === 'function') {
+    breadcrumbs.value = newRoute.meta.breadcrumb(newRoute);
+  }
+});
 </script>
 
 <style scoped src="./BreadcrumbBar.styles.scss"></style>
