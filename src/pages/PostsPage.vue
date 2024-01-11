@@ -81,7 +81,7 @@ onMounted(getPosts);
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px 15px;
+  padding: 60px 15px 20px;
 }
 
 .posts__item {
