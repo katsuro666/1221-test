@@ -37,6 +37,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  padding: 20px;
 }
 
 .nav__container {
