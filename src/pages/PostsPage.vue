@@ -16,6 +16,12 @@
         </router-link>
       </li>
     </ul>
+
+    <v-snackbar v-model="isPostDeleted" timeout="3000" timer="true" text="Ого! Пост удалён 😳">
+      <template v-slot:actions>
+        <v-btn color="green" variant="text" @click="isPostDeleted = false">Ясно</v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -35,6 +41,7 @@ const url = 'https://jsonplaceholder.typicode.com/posts';
 
 const isLoading = ref(false);
 const isError = ref(false);
+const isPostDeleted = ref(false);
 
 const posts = ref<PostsType[]>([]);
 
@@ -54,6 +61,7 @@ async function getPosts() {
 
 function deletePost(id: number) {
   posts.value = posts.value.filter((post) => post.id !== id);
+  isPostDeleted.value = true;
 }
 
 onMounted(getPosts);
