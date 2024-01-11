@@ -74,6 +74,7 @@ onMounted(getPost);
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 60px 15px 20px;
 }
 .post__item,
 .post__skeleton {
